@@ -11,38 +11,38 @@ startBtn.addEventListener('click', function() {
     runTimer()
 });
 
-stoptBtn.addEventListener('click', () => {
+stoptBtn.addEventListener('click', function() {
     stopTimer()
-})
+});
 
-resetBtn.addEventListener('click', () => {
-    startDate = new Date()
+resetBtn.addEventListener('click', function() {
+    startDate = new Date();
     drawTime(startDate)
-})
+});
 
-const drawTime = (startDate) => {
+const drawTime = function(startDate) {
     const timeElapsed = new Date() - startDate;
     const sec = Math.floor(timeElapsed / 1000);
     const msec = timeElapsed - sec * 1000;
-    el.innerText = `${sec}.${msec}`
-}
+    el.innerText = `${sec}.${msec}`;
+};
 
-const runTimer = () => {
+const runTimer = function() {
     if (intervalId === null) {
         if (startDate === null) {
             startDate = new Date()
         }
-        intervalId = setInterval(() => {
+        intervalId = setInterval(function() {
             drawTime(startDate)
-        }, 1);
+        }, 1)
     }
-}
+};
 
-const stopTimer = () => {
+const stopTimer = function() {
     if (intervalId !== null) {
         clearInterval(intervalId);
         intervalId = null
     }
-}
+};
 
 drawTime(new Date());
