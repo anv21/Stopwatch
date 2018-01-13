@@ -11,7 +11,7 @@
 
     }
 
-    #timer {
+    h1 {
         font-size: 100px;
         color: white;
         text-align: center;
@@ -20,12 +20,7 @@
         margin-bottom: 15%;
     }
 
-    .inline {
-        width: 70%;
-        margin: 0 auto;
-    }
-
-    .bth {
+       .bth {
         width: 25%;
         margin-left: 5%;
         height: 60px;
